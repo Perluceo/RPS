@@ -1,11 +1,14 @@
 .container {
     align-content: center;
     background-color: rgb(81, 117, 105);
-    padding: 1px 2em 3px;
-    margin: 2em;
+    padding: 1px 2em 15px;
+    margin: 1em;
     border: 8px solid rgb(4, 4, 54);
     text-align: center;
     color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 18pt;
+    font-variant: small-caps;
 }
 
 html,
@@ -17,4 +20,5 @@ body {
 
 #title {
     text-align: center;
+    font-family: sans-serif;
 }

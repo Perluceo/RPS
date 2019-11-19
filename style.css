@@ -1,26 +1,31 @@
 .container {
-    align-content: center;
-    background-color: rgb(81, 117, 105);
-    padding: 1px 2em 15px;
-    margin: 1em;
-    border: 8px solid rgb(4, 4, 54);
-    text-align: center;
-    color: whitesmoke;
-    font-family: sans-serif;
-    font-size: 18pt;
-    font-variant: small-caps;
-    font-weight: 800;
+  align-content: center;
+  background-color: rgb(81, 117, 105);
+  padding: 1px 2em 15px;
+  margin: 5%;
+  border: 8px solid darkgreen;
+  text-align: center;
+  color: whitesmoke;
+  font-family: sans-serif;
+  font-size: 18pt;
+  font-variant: small-caps;
+  font-weight: 800;
 }
 
 html,
 body {
-    padding: 0;
-    margin: 0;
-    background: rgb(180, 73, 11);
+  padding: 0;
+  margin: 0;
+  background: rgb(7, 34, 94);
 }
 
 #title {
-    text-align: center;
-    font-family: sans-serif;
-    text-shadow: 1px 0px 10px blue;
+  text-align: center;
+  font-family: sans-serif;
+  text-shadow: 1px 0px 10px blue;
+}
+
+#buttons {
+  align-content: center;
+  padding: 15px 22em 15px;
 }

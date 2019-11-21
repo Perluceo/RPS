@@ -1,32 +1,53 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8">
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>RPS</title>
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Satisfy&display,cursive" rel="stylesheet">
+    <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+    <script src="https://use.fontawesome.com/a6eadd38d4.js"></script>
+    <script src="https://kit.fontawesome.com/0144ed492b.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+
 
 </head>
 
 <body>
-    <div id="buttons">
-        <img src="/assets/rockHandIcon.png" height=170; width=171; name="rock" id="rock" />
-        <img src="/assets/paperHandIcon.png" height=170; width=171; name="paper" id="paper" />
-        <img src="/assets/scissorHandIcon.png" height=170; width=171; name="scissors" id="scissors" />
+    <div id="gameOver">
+        <div id="gameResults">
+            <h1 id="gameResultsText"></h1>
+            <h2>Play again?</h2>
+        </div>
+
+    </div>
+    <div id="intro">
+
+        <h1><span class="green">Rock</span> <span class="purple">Paper</span> <span class="">Scissors</span></h1>
+        <h2>Let's play!</h2>
+        <button id="bestOf5">Best of 5</button>
+        <button id="bestOf7">Best of 7</button>
+    </div>
+    <p id="results"></p>
+    <div id="user">
+        <p id="score"></p>
+        <button id="rock" class="default"></button>
+        <button id="paper" class="default"></button>
+        <button id="scissors" class="default"></button>
     </div>
 
-
-    <div class="container">
-        <p id="instructions">Press r, p, or s to start playing!</p>
-        <p id="userchoice"></p>
-        <p id="computerchoice"></p>
-        <p id="wins"></p>
-        <p id="losses"></p>
-        <p id="ties"></p>
+    <div id="computer">
+        <p id="computerScore"></p>
+        <div id="computerRock" class="computer-choice"></div>
+        <div id="computerPaper" class="computer-choice"></div>
+        <div id="computerScissors" class="computer-choice"></div>
     </div>
-
+    <script src="app.js" charset="utf-8">
+    </script>
 </body>
-
-<script src="app.js"></script>
 
 </html>

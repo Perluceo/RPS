@@ -67,6 +67,8 @@
             'scissors'
         ];
 
+        var CHOICES_LENGTH = choices.length;
+
         // create the text for winning or drawing
         var USER_WINS = "You win!";
         var COMP_WINS = "Computer wins";

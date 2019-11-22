@@ -14,38 +14,36 @@
 
         // get the game area and get access to all the buttons
 
-        var userChoices = document.getElementById('user').getElementsByTagName('button');
+        let userChoices = document.getElementById('user').getElementsByTagName('button');
 
-        var comp = document.getElementById('computer');
-        var compChoices = comp.getElementsByTagName('div');
+        let compChoices = document.getElementById('computer').getElementsByTagName('div');
 
         // get the results element and hide it initially
-        var results = document.getElementById('results');
+        let results = document.getElementById('results');
 
         //hide(results);
         results.style.display = 'none';
 
         // the gameover screen and final results
-        var gameOver = document.getElementById('gameOver');
+        let gameOver = document.getElementById('gameOver');
         //hide(gameOver);
         gameOver.style.display = 'none';
-        var gameResults = document.getElementById('gameResults');
-        var gameResultsText = document.getElementById('gameResultsText');
+        let gameResults = document.getElementById('gameResults');
+        let gameResultsText = document.getElementById('gameResultsText');
 
         // get the intro element and the buttons for choosing a game type
-        var intro = document.getElementById('intro');
-        var bestOf5 = document.getElementById('bestOf5');
-        var bestOf7 = document.getElementById('bestOf7');
+        let intro = document.getElementById('intro');
+        let bestOf5 = document.getElementById('bestOf5');
+        let bestOf7 = document.getElementById('bestOf7');
 
-        // score elements and score variables
-        var userScoreElement = document.getElementById('score');
-        var computerScoreElement = document.getElementById('computerScore');
-        var score;
-        var computerScore;
+        // score elements and score letiables
+        let userScoreElement = document.getElementById('score');
+        let computerScoreElement = document.getElementById('computerScore');
+        let score;
+        let computerScore;
 
-        // prepare a variable to hold the game type
-        // best of 5 or best of 7
-        var gameType;
+        // best of 5 or 7 holding letiable game type
+        let gameType;
 
         // start the best of 5 game
         bestOf5.onclick = function () {
@@ -61,27 +59,29 @@
         getScore();
 
         // create the choices
-        var choices = [
+        let choices = [
             'rock',
             'paper',
             'scissors'
         ];
 
-        var CHOICES_LENGTH = choices.length;
+
+
 
         // create the text for winning or drawing
-        var USER_WINS = "You win!";
-        var COMP_WINS = "Computer wins";
-        var TIE = "TIE"
+        let USER_WINS = "You win!";
+        let COMP_WINS = "Computer wins";
+        let TIE = "TIE"
 
-        var DRAW = '<i class="fab fa-black-tie"></i>';
-        var TROPHY = '<i class="fas fa-trophy"></i>';
-        var BAN = '<i class="fas fa-ban"></i>';
+        //modal like behavior
+        let DRAW = '<i class="fab fa-black-tie"></i>';
+        let TROPHY = '<i class="fas fa-trophy"></i>';
+        let BAN = '<i class="fas fa-ban"></i>';
 
         // add an onclick event to each button and disable them initially
-        for (var i = 0; i < userChoices.length; i++) {
+        for (let i = 0; i < userChoices.length; i++) {
             userChoices[i].onclick = selection;
-            userChoices[i].disabled = true;
+
         }
 
         function enableGame() {
@@ -101,21 +101,22 @@
         }
 
         function computerSelection() {
-            var randomIndex = Math.floor(Math.random() * CHOICES_LENGTH);
-            var compChoice = choices[randomIndex];
+            let randomIndex = Math.floor(Math.random() * choices.length);
+            let compChoice = choices[randomIndex];
             return compChoice;
         }
 
         function selection() {
             // get user/computer choice 
-            var chosen = this.id;
-            var comp = computerSelection();
+            let chosen = this.id;
+            let comp = computerSelection();
 
             // get the users chosen item
-            var chosenItem = document.getElementById(chosen);
+            let chosenItem = document.getElementById(chosen);
 
             // prepare the chosenCompItem for dynamic id assignment
-            var chosenCompItem;
+            let chosenCompItem;
+
 
             if (comp === 'rock') {
                 chosenCompItem = document.getElementById('computerRock');
@@ -171,14 +172,14 @@
         // functions
 
         function disable(elements) {
-            for (var i = 0; i < elements.length; i++) {
+            for (let i = 0; i < elements.length; i++) {
                 elements[i].disabled = true;
                 elements[i].classList.add('unselected');
             }
         }
 
         function enable(elements) {
-            for (var i = 0; i < elements.length; i++) {
+            for (let i = 0; i < elements.length; i++) {
                 elements[i].disabled = false;
                 elements[i].classList.add('default');
                 elements[i].classList.remove('selected', 'unselected');

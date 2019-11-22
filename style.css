@@ -55,7 +55,7 @@ body {
 
 #intro h2,
 #gameResults h2 {
-  font-family: Bebas Neue, Satisfy, cursive;
+  font-family: 'Bebas Neue', 'Satisfy', cursive;
   color: #555;
   font-size: 30px;
 }
@@ -168,9 +168,7 @@ body {
   left: 50%;
   margin-left: -180px;
 
-  transition: opacity .6s ease-out;
-  -webkit-transition: opacity .6s ease-out;
-  -moz-transition: opacity .6s ease-out;
+
 }
 
 #results i {
@@ -213,22 +211,22 @@ body {
 
 .disappear {
   opacity: 0;
-  filter: alpha(opacity=0);
+
 }
 
 .reappear {
   opacity: 1;
-  filter: alpha(opacity=100);
+
 }
 
 .unselected {
   opacity: .1;
-  filter: alpha(opacity=10);
+
 }
 
 .selected {
   opacity: 1;
-  filter: alpha(opacity=100);
+
 }
 
 #gameOver {

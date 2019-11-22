@@ -128,7 +128,7 @@
                 chosenCompItem = document.getElementById('computerScissors');
             }
 
-			/* show results and disable all choices so no more can 
+			/* show results and disable all choices so no more selections can 
 			 be made while waiting for the pop up to fade out*/
             results.style.display = 'block';
             results.className = "reappear";

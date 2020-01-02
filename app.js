@@ -36,13 +36,13 @@
         let bestOf5 = document.getElementById('bestOf5');
         let bestOf7 = document.getElementById('bestOf7');
 
-        // score elements and score letiables
+        // score elements and score variables
         let userScoreElement = document.getElementById('score');
         let computerScoreElement = document.getElementById('computerScore');
         let score;
         let computerScore;
 
-        // best of 5 or 7 holding letiable game type
+        // best of 5 or 7 holding variable game type
         let gameType;
 
         // start the best of 5 game
@@ -140,7 +140,7 @@
             chosenItem.classList.add('selected');
             chosenCompItem.classList.add('selected');
 
-            // determine winner
+            // determine winner modal
             if (chosen === comp) {
                 results.textContent = TIE;
                 results.innerHTML += DRAW;
